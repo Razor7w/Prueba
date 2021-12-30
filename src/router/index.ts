@@ -14,57 +14,12 @@ const routes: Array<RouteConfig> = [
   {
     path: '/base',
     name: 'Base',
-    component: () => import(/* webpackChunkName: "login" */ '@/views/Home.vue')
+    component: () => import(/* webpackChunkName: "base" */ '@/views/Home.vue')
   },
   {
-    path: '/login',
-    name: 'Login',
-    component: () => import(/* webpackChunkName: "login" */ '@/views/Login.vue')
-  },
-  {
-    path: '/Inicio',
-    name: 'Inicio',
-    component: () => import(/* webpackChunkName: "Inicio" */ '@/views/Inicio.vue'),
-    meta: { requiresAuth: true, layout: 'default' }
-  },
-  {
-    path: '/Caja',
-    name: 'Caja',
-    component: () => import(/* webpackChunkName: "caja" */ '@/views/Caja.vue'),
-    meta: { requiresAuth: true, layout: 'default' }
-  },
-  {
-    path: '/Comandas',
-    name: 'Comandas',
-    component: () => import(/* webpackChunkName: "comandas" */ '@/views/Comandas.vue'),
-    meta: { requiresAuth: true, layout: 'default' }
-  },
-  {
-    path: '/Cuadrar-caja',
-    name: 'Cuadrar Caja',
-    component: () => import(/* webpackChunkName: "cuadrar-caja" */ '@/views/Cuadrar-caja.vue'),
-    meta: { requiresAuth: true, layout: 'default' }
-  },
-  {
-    path: '/Productos',
-    name: 'Productos',
-    component: () => import(/* webpackChunkName: "cuadrar-caja" */ '@/views/Productos.vue'),
-    meta: { requiresAuth: true, layout: 'default', admin: true }
-  },
-  {
-    path: '/Usuarios',
-    name: 'Usuarios',
-    component: () => import(/* webpackChunkName: "cuadrar-caja" */ '@/views/Usuarios.vue'),
-    meta: { requiresAuth: true, layout: 'default', admin: true }
-  },
-  {
-    path: '/test',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
-    meta: { layout: 'test', tester: true }
+    path: '/api/:type',
+    name: 'api',
+    component: () => import(/* webpackChunkName: "api" */ '@/views/Api.vue')
   }
 ]
 
